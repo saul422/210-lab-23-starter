@@ -38,14 +38,19 @@ int main() {
 }
 
 int main_menu (){//create a main_menu function
-cout<<//*** GOAT MANAGER 3001 ***
-//[1] Add a goat
-//[2] Delete a goat
-//[3] List goats
-//[4] Quit
-//choice -->
+int choice;  //define choice
+do
+{
+cout<<"*** GOAT MANAGER 3001 ***"<< endl;  //*** GOAT MANAGER 3001 ***
+//create a do while loop to get choices 1-4
+cout<<"[1] Add a goat\n [2] Delete a goat\n [3] List goats\n[4] Quit\n";
+cout<< "choice --> ";
+} while (choice < 1 || choice > 4); //set the range between 1-4
 
 
+cin>> choice;
+return choice;
+};
 
 
 
