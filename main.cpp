@@ -124,7 +124,19 @@ void display_trip(const list<Goat>& trip) {
 
 // Select a goat by index
 int select_goat(const list<Goat>& trip) {
-    display_trip(trip);
+    if (trip.empty())  {
+        if (trip.empty()) {
+            cout << "No goats to select form." << endl;
+            return -1;
+        }
+    }
+    
+    int i = 1;
+    for (const Goat& g : trip)  {
+        cout << "[" << i++ << "]";
+        g.display();
+        cout<<endl;
+    }
     int choice;
     cout << "Select a goat by number (or 0 to cancel): ";
     cin >> choice;
