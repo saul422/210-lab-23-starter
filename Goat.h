@@ -33,8 +33,8 @@ void display () const {
         cout<< name << " ("<< age << ", " << ") ";
 }
     // write overloaded < operator for the std::list
-    bool operator< (const Goat&other) const{
-        return name < other.name;
+    bool operator< (const Goat& g) const {
+        return name < g.name;
     }
 };
 
