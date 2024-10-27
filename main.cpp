@@ -7,10 +7,10 @@ using namespace std;
 
 const int SZ_NAMES = 200, SZ_COLORS = 25, MAX_AGE = 20;
 
-int select_goat(list<Goat> trip);
+int select_goat(const list<Goat> trip);
 void delete_goat(list<Goat> &trip);
 void add_goat(list<Goat> &trip, string [], string []);
-void display_trip(list<Goat> trip);
+void display_trip(const list<Goat> trip);
 int main_menu();
 
 
@@ -124,7 +124,7 @@ void display_trip(const list<Goat> &trip ) {
     }
 }
 //select goat by index
-int select_goat(const list<Goat> &trip) {
+int select_goat(const list<Goat>& trip) {
     display_trip(trip);
     int choice;
     cout<< "Select a goat by a number (or 0 to cancel): ";
